@@ -28,7 +28,7 @@ endif
 
 syntax region jsHTMLTemplateString matchgroup=jsComment keepend start=+\(\/\*html\*\/\|html\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@HTML
 
-syntax region jsSQLTemplateString matchgroup=jsComment keepend start=+\(\/\*sql\*\/\\s\?|sql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@SQL
+syntax region jsSQLTemplateString matchgroup=jsComment keepend start=+\(\/\*sql\*\/\s\?\|sql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@SQL
 
 syntax region jsGraphQLTemplateString matchgroup=jsComment keepend start=+\(\/\*g\(raph\)\?ql\*\/\|g\(raph\)\?ql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@GraphQL
 
