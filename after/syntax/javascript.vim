@@ -26,12 +26,12 @@ if exists('s:current_syntax')
   let b:current_syntax=s:current_syntax
 endif
 
-syntax region jsHTMLTemplateString matchgroup=jsComment keepend start=+\(\/\*html\*\/\|html\)\s?`+  skip=+\\\(`\|$\)+  end=+`+ contains=@HTML
+syntax region jsHTMLTemplateString matchgroup=jsComment keepend start=+\(\/\*html\*\/\|html\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@HTML
 
-syntax region jsSQLTemplateString matchgroup=jsComment keepend start=+\(\/\*sql\*\/\|sql\)\s?`+  skip=+\\\(`\|$\)+  end=+`+ contains=@SQL
+syntax region jsSQLTemplateString matchgroup=jsComment keepend start=+\(\/\*sql\*\/\\s?|sql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@SQL
 
-syntax region jsGraphQLTemplateString matchgroup=jsComment keepend start=+\(\/\*g\(raph\)\?ql\*\/\|g\(raph\)\?ql\)\s?`+  skip=+\\\(`\|$\)+  end=+`+ contains=@GraphQL
+syntax region jsGraphQLTemplateString matchgroup=jsComment keepend start=+\(\/\*g\(raph\)\?ql\*\/\|g\(raph\)\?ql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@GraphQL
 
-syntax region jsMDTemplateString matchgroup=jsComment keepend start=+\(\/\*markdown\*\/\|\/\*md\*\/\|markdown\|md\)\s?`+  skip=+\\\(`\|$\)+  end=+`+ contains=@MD
+syntax region jsMDTemplateString matchgroup=jsComment keepend start=+\(\/\*markdown\*\/\|\/\*md\*\/\|markdown\|md\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@MD
 
 unlet g:vim_javascript_tagged_loaded
