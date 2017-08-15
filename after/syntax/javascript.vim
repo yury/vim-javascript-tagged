@@ -26,7 +26,7 @@ if exists('s:current_syntax')
   let b:current_syntax=s:current_syntax
 endif
 
-syntax region jsHTMLTemplateString matchgroup=jsComment keepend start=+\(\/\*html\*\/\|html\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@HTML
+syntax region jsHTMLTemplateString matchgroup=jsComment keepend start=+\(\/\*html\*\/\s\?\|html\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@HTML
 
 syntax region jsSQLTemplateString matchgroup=jsComment keepend start=+\(\/\*sql\*\/\s\?\|sql\)`+  skip=+\\\(`\|$\)+  end=+`+ contains=@SQL
 
